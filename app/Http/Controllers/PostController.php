@@ -2,20 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\MyController;
 use Illuminate\Http\Request;
 
-class MyControllers extends Controller
+class PostController extends Controller
 {
-    
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        //echo "set";
-        $products = MyController::latest()->paginate(5);
-        //return view('products.index');
-      
-     //   return view('products.index',compact('products'))
-       //     ->with('i', (request()->input('page', 1) - 1) * 5);
+        //
     }
 
     /**
@@ -42,10 +40,10 @@ class MyControllers extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\MyController  $myController
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(MyController $myController)
+    public function show($id)
     {
         //
     }
@@ -53,10 +51,10 @@ class MyControllers extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\MyController  $myController
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(MyController $myController)
+    public function edit($id)
     {
         //
     }
@@ -65,10 +63,10 @@ class MyControllers extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\MyController  $myController
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, MyController $myController)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +74,10 @@ class MyControllers extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\MyController  $myController
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(MyController $myController)
+    public function destroy($id)
     {
         //
     }
